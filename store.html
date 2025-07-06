@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop the best home gym equipment, hand-picked and reviewed by the experts at HomeIronHQ. Find top-rated gear to build your ultimate home gym.">
+    <title>Store - HomeIronHQ</title>
+    <style>
+        /* --- Global Styles & Themes (Copied from Homepage) --- */
+        :root {
+            --primary-color: #ffffff;
+            --secondary-color: #000000;
+            --accent-color: #2997ff;
+            --accent-color-hover: #57abff;
+            --text-color: #f5f5f7;
+            --text-secondary-color: #a1a1a6;
+            --background-color: #131313;
+            --card-background: #1c1c1e;
+            --border-color: #3a3a3c;
+            --nav-background: linear-gradient(to bottom, rgba(58, 58, 60, 0.85), rgba(44, 44, 46, 0.85));
+            --nav-border-color: #4a4a4c;
+            --card-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            --card-hover-shadow: 0 15px 50px rgba(0,0,0,0.4);
+            --card-hover-border: #4a4a4c;
+        }
+        body.light-mode {
+            --primary-color: #000000;
+            --secondary-color: #ffffff;
+            --accent-color: #0071e3;
+            --accent-color-hover: #0077ed;
+            --text-color: #1d1d1f;
+            --text-secondary-color: #6e6e73;
+            --background-color: #f5f5f7;
+            --card-background: #ffffff;
+            --border-color: #d2d2d7;
+            --nav-background: linear-gradient(to bottom, rgba(248, 248, 249, 0.85), rgba(233, 233, 237, 0.85));
+            --nav-border-color: #cccccc;
+            --card-shadow: 0 8px 32px rgba(0,0,0,0.07);
+            --card-hover-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            --card-hover-border: var(--accent-color);
+        }
+        body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","SF Pro Text",Roboto,Helvetica,Arial,sans-serif; margin:0; background-color:var(--background-color); color:var(--text-color); line-height:1.65; font-size:17px; font-weight:400; letter-spacing:-0.022em; transition:background-color .3s ease,color .3s ease }
+        *, *::before, *::after { box-sizing: border-box; }
+        h1,h2,h3 { font-weight:700; margin-top:2.5rem; margin-bottom:1rem; color:var(--primary-color); letter-spacing:-0.025em; transition:color .3s ease }
+        h1 { font-size:3rem; line-height:1.1 } h2 { font-size:2.5rem } h3 { font-size:1.5rem }
+        p { margin-bottom:1.5rem; color:var(--text-secondary-color); font-size:1.1rem; transition:color .3s ease }
+        a { color:var(--accent-color); text-decoration:none; transition:color .3s ease } a:hover { color:var(--accent-color-hover) }
+        .container { max-width:1024px; margin:0 auto; padding:0 22px }
+        .main-header { background:var(--nav-background); backdrop-filter:saturate(180%) blur(20px); -webkit-backdrop-filter:saturate(180%) blur(20px); border-bottom:1px solid var(--nav-border-color); position:sticky; top:0; z-index:100; height:52px; transition:background .3s ease,border-color .3s ease }
+        .main-nav { display:flex; justify-content:space-between; align-items:center; height:100% }
+        .logo { font-weight:600; font-size:1.25rem; color:var(--primary-color) } .logo:hover { text-decoration:none; color:var(--primary-color) }
+        .nav-links { list-style:none; margin:0; padding:0; display:flex; gap:30px; flex-grow:1; justify-content:center }
+        .nav-links a { color:var(--text-secondary-color); font-size:.85rem; font-weight:500; transition:color .3s ease } .nav-links a:hover { color:var(--primary-color); text-decoration:none }
+        .theme-toggle { background:none; border:none; cursor:pointer; padding:5px; display:flex; align-items:center; justify-content:center; color:var(--text-secondary-color) }
+        .theme-toggle:hover { color:var(--primary-color) } .theme-toggle .icon { width:20px; height:20px } .theme-toggle .sun-icon { display:none } .theme-toggle .moon-icon { display:block }
+        body.light-mode .theme-toggle .sun-icon { display:block } body.light-mode .theme-toggle .moon-icon { display:none }
+        .hero { text-align:center; padding:5rem 0; background:var(--hero-bg); transition:background .3s ease }
+        .hero h1 { font-size:3.5rem; margin-bottom:1rem; background:-webkit-linear-gradient(45deg, var(--hero-gradient-start), var(--hero-gradient-end)); -webkit-background-clip:text; -webkit-text-fill-color:transparent }
+        .hero .subtitle { font-size:1.5rem; color:var(--text-secondary-color); max-width:650px; margin:0 auto; line-height:1.4 }
+        .btn-secondary { background:var(--btn-secondary-bg); color:var(--text-color); border:1px solid var(--border-color); box-shadow:none; transition:background-color .3s ease,color .3s ease,border-color .3s ease,transform .3s ease }
+        .btn-secondary:hover { background:var(--btn-secondary-hover-bg); box-shadow:none; transform:scale(1.05) }
+        .card-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:2.5rem; padding:4rem 0 }
+        .card { background-color:var(--card-background); border-radius:24px; overflow:hidden; border:1px solid var(--border-color); box-shadow:var(--card-shadow); transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease,background-color .3s ease; display:flex; flex-direction:column }
+        .card:hover { transform:translateY(-8px); box-shadow:var(--card-hover-shadow); border-color:var(--card-hover-border) }
+        .card-image img { width:100%; height:220px; object-fit:cover; display:block; opacity:.9; transition:opacity .3s ease }
+        .card:hover .card-image img { opacity:1 }
+        .card-content { padding:2rem; flex-grow:1; display:flex; flex-direction:column }
+        .card-content h3 { margin-top:0; color:var(--primary-color) } .card-content p { font-size:1rem; color:var(--text-secondary-color) }
+        .card-content .btn { margin-top:auto; align-self:flex-start }
+        .main-footer { background-color:var(--footer-bg); color:var(--text-secondary-color); padding:3rem 0; text-align:center; font-size:.8rem; border-top:1px solid var(--border-color); transition:background-color .3s ease,color .3s ease,border-color .3s ease }
+        .footer-content { max-width:500px; margin:0 auto; line-height:1.5 }
+        @media (max-width:768px) { body { font-size:16px } h1 { font-size:2.5rem } .hero h1 { font-size:2.8rem } .hero .subtitle { font-size:1.25rem } .nav-links { display:none } .main-nav { justify-content:space-between } .logo { flex-grow:1 } .card-grid { grid-template-columns:1fr } }
+    </style>
+</head>
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav container">
+            <a href="index.html" class="logo">HomeIronHQ</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="ai-workout-generator.html">AI - Personal Trainer</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" title="Toggle light/dark mode">
+                <svg class="icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.25a.75.75 0 01.75.75v2.25a.75.75 0 01-1.5 0V3a.75.75 0 01.75-.75zM7.5 12a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0zM18.894 6.106a.75.75 0 010 1.06l-1.591 1.59a.75.75 0 11-1.06-1.06l1.59-1.59a.75.75 0 011.06 0zM21.75 12a.75.75 0 01-.75.75h-2.25a.75.75 0 010-1.5h2.25a.75.75 0 01.75.75zM17.836 17.894a.75.75 0 011.06 0l1.59 1.59a.75.75 0 11-1.06 1.06l-1.59-1.59a.75.75 0 010-1.06zM12 21.75a.75.75 0 01-.75-.75v-2.25a.75.75 0 011.5 0v2.25a.75.75 0 01-.75.75zM5.106 17.894a.75.75 0 010-1.06l1.59-1.59a.75.75 0 111.06 1.06l-1.59 1.59a.75.75 0 01-1.06 0zM3 12a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H3.75A.75.75 0 013 12zM6.106 5.106a.75.75 0 011.06 0l1.59 1.59a.75.75 0 01-1.06 1.06L6.106 6.166a.75.75 0 010-1.06z"></path></svg>
+                <svg class="icon moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M9.528 1.718a.75.75 0 01.162.819A8.97 8.97 0 009 6a9 9 0 009 9 8.97 8.97 0 003.463-.69.75.75 0 01.981.98 10.503 10.503 0 01-9.694 6.46c-5.799 0-10.5-4.701-10.5-10.5 0-3.836 2.04-7.175 5.168-8.97a.75.75 0 01.818.162z" clip-rule="evenodd"></path></svg>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>The Store</h1>
+                <p class="subtitle">The best home gym equipment, tested and approved by our experts.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="card-grid">
+                <!-- Product Card 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x400/1c1c1e/a1a1a6?text=Dumbbells" alt="A set of modern adjustable dumbbells." onerror="this.onerror=null;this.src='https://placehold.co/600x400/1c1c1e/a1a1a6?text=Image+Not+Found';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Adjustable Dumbbells</h3>
+                        <p>Our top picks for adjustable dumbbells that save space and deliver a killer workout.</p>
+                        <a href="#" class="btn btn-secondary">Check Prices</a>
+                    </div>
+                </article>
+
+                <!-- Product Card 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x400/1c1c1e/a1a1a6?text=Bands" alt="A collection of colorful resistance bands." onerror="this.onerror=null;this.src='https://placehold.co/600x400/1c1c1e/a1a1a6?text=Image+Not+Found';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Resistance Bands</h3>
+                        <p>The most versatile and portable tool for strength, mobility, and rehabilitation.</p>
+                        <a href="#" class="btn btn-secondary">Check Prices</a>
+                    </div>
+                </article>
+
+                <!-- Product Card 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://placehold.co/600x400/1c1c1e/a1a1a6?text=Kettlebells" alt="A competition-style kettlebell." onerror="this.onerror=null;this.src='https://placehold.co/600x400/1c1c1e/a1a1a6?text=Image+Not+Found';">
+                    </div>
+                    <div class="card-content">
+                        <h3>Kettlebells</h3>
+                        <p>Unlock full-body functional fitness with our favorite competition and cast-iron kettlebells.</p>
+                        <a href="#" class="btn btn-secondary">Check Prices</a>
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <p>&copy; 2025 HomeIronHQ. All Rights Reserved.</p>
+            <p>As an Amazon Associate I earn from qualifying purchases. Our reviews are independent and not influenced by commissions.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const applyTheme = () => { const savedTheme = localStorage.getItem('theme'); if (savedTheme === 'light') { body.classList.add('light-mode'); } };
+        const toggleTheme = () => { body.classList.toggle('light-mode'); const currentTheme = body.classList.contains('light-mode') ? 'light' : 'dark'; localStorage.setItem('theme', currentTheme); };
+        themeToggle.addEventListener('click', toggleTheme);
+        document.addEventListener('DOMContentLoaded', applyTheme);
+    </script>
+
+</body>
+</html>
